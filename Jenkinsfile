@@ -14,7 +14,7 @@ pipeline {
                 				git clone https://github.com/Anusha1913/JAVA1.git
                   				cd JAVA1
                   				mvn install
-                  				echo "Build Successful"
+                  				echo "Build Successful!"
                 				sh 'sleep 30'
 						fi
 				'''
