@@ -6,16 +6,17 @@ pipeline {
 			steps {
 				echo 'Building JAVA project'
                 		sh '''
-                		set +x
-                		if [[ -d "JAVA1" ]];then
-                		cd JAVA1 && git pull
-                        	mvn clean install
-                		else
-                		git clone https://github.com/Anusha1913/JAVA1.git
-                  		cd JAVA1
-                  		mvn install
-                  		echo "Build Successful"
-                		sh 'sleep 30'
+                			set +x
+                			if [[ -d "JAVA1" ]];then
+                				cd JAVA1 && git pull
+                        			mvn clean install
+                			else
+                				git clone https://github.com/Anusha1913/JAVA1.git
+                  				cd JAVA1
+                  				mvn install
+                  				echo "Build Successful"
+                				sh 'sleep 30'
+						fi
 				'''
 			}	
 		}
